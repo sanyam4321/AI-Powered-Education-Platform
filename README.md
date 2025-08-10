@@ -107,13 +107,3 @@ SECRET_KEY=your_secret_key_here
 - `POST /api/quiz/submit` - Submit quiz answers
 - `GET /api/recommendations/:user_id` - Get personalized recommendations
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details 
