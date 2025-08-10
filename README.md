@@ -16,7 +16,7 @@ A modern, intelligent e-learning platform that uses AI to generate personalized 
 ### Backend
 - **Flask**: Python web framework for API
 - **OpenAI API**: AI content generation
-- **SQLite**: Database for user data and progress
+- **MySQL**: Database for user data and progress
 - **JWT**: Authentication and session management
 
 ### Frontend
