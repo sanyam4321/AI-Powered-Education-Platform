@@ -37,7 +37,7 @@ class AIService:
         self.parser = PydanticOutputParser(pydantic_object=TopicContent)
     
     def generate_topic_content(self, topic: str, difficulty_level: str = 'beginner') -> Dict[str, Any]:
-        """Generate comprehensive learning content for a topic using LangChain"""
+        """Generate comprehensive learning content for a topic"""
         
         prompt_template = ChatPromptTemplate.from_messages([
             ("system", "You are an expert educational content creator. Provide clear, engaging, and accurate learning materials."),
@@ -71,7 +71,7 @@ class AIService:
             return self._get_fallback_content(topic, difficulty_level)
     
     def generate_adaptive_quiz(self, topic: str, user_level: str, previous_performance: float) -> Dict[str, Any]:
-        """Generate adaptive quiz based on user performance using LangChain"""
+        """Generate adaptive quiz based on user performance"""
         
         difficulty_adjustment = self._calculate_difficulty_adjustment(previous_performance)
         
@@ -109,7 +109,7 @@ class AIService:
             return self._get_fallback_quiz(topic)
     
     def generate_learning_recommendations(self, user_topics: List[str], user_performance: Dict[str, float]) -> List[str]:
-        """Generate personalized learning recommendations using LangChain"""
+        """Generate personalized learning recommendations"""
         
         prompt_template = ChatPromptTemplate.from_messages([
             ("system", "You are an expert learning advisor. Provide personalized recommendations."),
