@@ -13,7 +13,9 @@ app = Flask(__name__)
 
 # Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-secret-key-here')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///elearning.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    'mysql+pymysql://root:pass@localhost:3306/elearning'
+)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'jwt-secret-key')
 
@@ -22,7 +24,6 @@ db = SQLAlchemy(app)
 jwt = JWTManager(app)
 CORS(app)
 
-# Import routes after db initialization
 from routes import *
 
 if __name__ == '__main__':
