@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { logout, toggleTheme } from '../redux/slices/authSlice';
-import { toggleSidebar } from '../redux/slices/uiSlice';
+import { logout } from '../redux/slices/authSlice';
+import { toggleSidebar, toggleTheme } from '../redux/slices/uiSlice';
 
 const Navbar = () => {
   const dispatch = useDispatch();
